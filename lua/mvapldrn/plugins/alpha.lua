@@ -23,6 +23,7 @@ return {
 			dashboard.button("SPC ff", "󰈞  Fuzzy Find File", "<cmd>Telescope find_files<CR>"),
 			dashboard.button("SPC fs", "  Find String in File", "<cmd>Telescope live_grep<CR>"),
 			dashboard.button("SPC wr", "󰁯  WorkSession Restore", "<cmd>SessionRestore<CR>"),
+			dashboard.button("c", "󰿅  Lazy config", "<cmd>Lazy<CR>"),
 			dashboard.button("q", "󰿅  Quit", "<cmd>qa<CR>"),
 		}
 
