@@ -38,7 +38,7 @@ return {
 			harpoon.ui:toggle_quick_menu(harpoon:list())
 		end, { desc = "Open Harpoon list" })
 
-		keymap.set("n", "<leader>ht", function()
+		keymap.set("n", "<leader>fh", function()
 			toggle_telescope(harpoon:list())
 		end, { desc = "Open Harpoon list" })
 

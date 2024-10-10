@@ -13,5 +13,10 @@ return {
 		vim.cmd([[hi LineNr guifg=#808080]])
 		vim.cmd([[hi CursorLineNr guifg=#f0f0f0]])
 		vim.cmd([[hi Comment guifg=#e0e030]])
+
+		-- To get bufferline correct
+		--vim.cmd([[hi BufferLineFill guifg=#000000]])
+		--vim.cmd([[hi BufferLineSeperator guifg=#000000]])
+		--vim.cmd([[hi BufferLineSeperatorSelected guifg=#000000]])
 	end,
 }
