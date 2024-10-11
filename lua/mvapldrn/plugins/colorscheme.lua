@@ -1,7 +1,9 @@
 return {
 	"eddyekofo94/gruvbox-flat.nvim",
-	priority = 1000,
+
 	enabled = true,
+
+	priority = 1000,
 	config = function()
 		vim.g.gruvbox_flat_style = "dark"
 		vim.g.gruvbox_italic_comments = true

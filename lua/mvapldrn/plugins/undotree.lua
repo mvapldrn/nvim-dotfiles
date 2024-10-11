@@ -1,6 +1,8 @@
 return {
 	"mbbill/undotree",
 
+	enabled = true,
+
 	config = function()
 		local keymap = vim.keymap
 

@@ -3,7 +3,11 @@ return {
 	branch = "harpoon2",
 	dependencies = { "nvim-lua/plenary.nvim" },
 
-	config = function()
+	enabled = false,
+
+	-- BUG: contains error
+
+	opts = function()
 		local harpoon = require("harpoon")
 
 		harpoon:setup()
@@ -27,27 +31,48 @@ return {
 				})
 				:find()
 		end
-
-		local keymap = vim.keymap
-
-		keymap.set("n", "<leader>ha", function()
-			harpoon:list():add()
-		end, { desc = "Add to Harpoon list" })
-
-		keymap.set("n", "<leader>hl", function()
-			harpoon.ui:toggle_quick_menu(harpoon:list())
-		end, { desc = "Open Harpoon list" })
-
-		keymap.set("n", "<leader>fh", function()
-			toggle_telescope(harpoon:list())
-		end, { desc = "Open Harpoon list" })
-
-		keymap.set("n", "<leader>hp", function()
-			harpoon:list():prev()
-		end, { desc = "Go to previous file in Harpoon list" })
-
-		keymap.set("n", "<leader>hn", function()
-			harpoon:list():next()
-		end, { desc = "Go to next file in Harpoon list" })
 	end,
+
+	keys = {
+		{
+			"<leader>ha",
+			function()
+				local harpoon = require("harpoon")
+				harpoon:list():add()
+			end,
+			desc = "Add to Harpoon list",
+		},
+		{
+			"<leader>hl",
+			function()
+				local harpoon = require("harpoon")
+				harpoon.ui:toggle_quick_menu(harpoon:list())
+			end,
+			desc = "Open Harpoon list",
+		},
+		{
+			"<leader>fh",
+			function()
+				local harpoon = require("harpoon")
+				toggle_telescope(harpoon:list())
+			end,
+			desc = "Open Harpoon list",
+		},
+		{
+			"<leader>hp",
+			function()
+				local harpoon = require("harpoon")
+				harpoon:list():prev()
+			end,
+			desc = "Go to previous file in Harpoon list",
+		},
+		{
+			"<leader>hn",
+			function()
+				local harpoon = require("harpoon")
+				harpoon:list():next()
+			end,
+			desc = "Go to next file in Harpoon list",
+		},
+	},
 }

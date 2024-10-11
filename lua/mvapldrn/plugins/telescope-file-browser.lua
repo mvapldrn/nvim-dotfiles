@@ -2,6 +2,8 @@ return {
 	"nvim-telescope/telescope-file-browser.nvim",
 	dependencies = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" },
 
+	enabled = true,
+
 	config = function()
 		local keymap = vim.keymap
 
